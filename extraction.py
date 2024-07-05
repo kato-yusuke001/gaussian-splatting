@@ -43,6 +43,5 @@ for i in tqdm(range(len(input_list))):
         cv2.imwrite(os.path.join(mask_output_path, os.path.basename(img_file_name)), mask_colors)
     else:
         mask_colors = np.zeros((image_cv2.shape[0], image_cv2.shape[1], 3), dtype=np.uint8)
-        # mask_colors[final_mask, :] = image_cv2[final_mask, :]
         cv2.imwrite(os.path.join(mask_output_path, os.path.basename(img_file_name)), mask_colors)
     
